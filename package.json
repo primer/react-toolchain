@@ -22,8 +22,7 @@
     "@storybook/react": "^6.5.0-alpha.64",
     "@storybook/testing-library": "^0.0.11",
     "execa": "^5.1.1",
-    "pkg-dir": "^5.0.0",
-    "webpack": "^5.72.0"
+    "pkg-dir": "^5.0.0"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.3",
