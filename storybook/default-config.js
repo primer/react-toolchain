@@ -1,0 +1,13 @@
+module.exports = {
+  // need to mention this for webpack 5, storybook default is 4
+  // do we need to support webpack 4? (dotcom & memex use webpack 5)
+  core: { builder: 'webpack5' },
+
+  // look through entire repo for *.stories.ts files
+  // might be slow, need to test
+  // this path is relative based on node_modules/@primer/react-scripts/storybook
+  stories: ['../../../../**/*.stories.@(js|jsx|ts|tsx)'],
+
+  // todo: add common addons. devs can customise and add custom addons
+  addons: []
+};
