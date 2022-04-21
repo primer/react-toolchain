@@ -8,6 +8,13 @@
 
 &nbsp;
 
+
+### Requirements
+
+- webpack 5+
+
+&nbsp;
+
 ### Setup
 
 ```
