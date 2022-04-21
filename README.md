@@ -2,6 +2,8 @@
   <img src="https://octodex.github.com/images/manufacturetocat.png" height="200px"/>
   <br><br>
   <b>Toolchain to help build React components with Primer</b>
+  <br><br>
+  <img src="https://img.shields.io/badge/maturity-proof--of--concept-d85151?style=flat-square"/>
 </p>
 
 &nbsp;
