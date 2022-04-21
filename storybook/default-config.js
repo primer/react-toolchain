@@ -10,8 +10,8 @@ module.exports = {
 
   // look through entire repo for *.stories.ts files
   // might be slow, need to test
-  // this path is relative based on node_modules/@primer/react-scripts/storybook
-  stories: ['../../../../**/*.stories.@(js|jsx|ts|tsx)'],
+  // this path is relative to the root of the application
+  stories: ['./**/*.stories.@(js|jsx|ts|tsx)'],
 
   // todo: add common addons. devs can customise and add custom addons
   addons: []
