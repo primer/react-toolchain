@@ -5,7 +5,7 @@ const execa = require('execa');
 const options = { env: { FORCE_COLOR: 'true' } };
 
 const storybookDir = path.resolve(__dirname, './storybook');
-const flags = `-p 6006 --config-dir ${storybookDir}`;
+const flags = `-p 6006 --config-dir ${storybookDir} --quiet`;
 
 const subprocess = execa('start-storybook', flags.split(' '), options);
 subprocess.stdout.pipe(process.stdout);
