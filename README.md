@@ -32,7 +32,7 @@ To customize storybook config, create a file at `.primer-scripts/storybook-main.
 
 ```js
 // example for memex:
-const defaultConfig = require('@siddharthkp/react-scripts/storybook/default-config');
+const defaultConfig = require('@primer/react-scripts/storybook/default-config');
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
