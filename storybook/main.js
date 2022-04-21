@@ -4,12 +4,18 @@
 const fs = require('fs');
 const path = require('path');
 const defaultConfig = require('./default-config');
+const pkgDir = require('pkg-dir');
 
 let config;
 
-const possibleLocation = path.resolve(__dirname, '../../../../', '.primer-scripts/storybook-main.js');
+const root = pkgDir.sync();
+const possibleLocation = path.resolve(root, '.primer-scripts/storybook-main.js');
 
 if (fs.existsSync(possibleLocation)) config = require(possibleLocation);
 else config = defaultConfig;
+
+// convert relative glob path to absolute
+// we need to do this because this config file is deep inside node_modules
+config.stories = config.stories.map((glob) => path.resolve(root, glob));
 
 module.exports = config;
