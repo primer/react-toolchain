@@ -13,6 +13,6 @@ module.exports = {
   // this path is relative based on node_modules/@primer/react-scripts/storybook
   stories: ['../../../../**/*.stories.@(js|jsx|ts|tsx)'],
 
-  // todo: add common addons. devs can customise and add custom addons
-  addons: []
+  // add common addons
+  addons: ['@storybook/addon-a11y', '@storybook/addon-links', '@storybook/addon-essentials']
 };

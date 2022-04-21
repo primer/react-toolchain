@@ -12,6 +12,7 @@
   "author": "primer",
   "license": "MIT",
   "dependencies": {
+    "@storybook/addon-a11y": "^6.5.0-alpha.64",
     "@storybook/addon-actions": "^6.5.0-alpha.64",
     "@storybook/addon-essentials": "^6.5.0-alpha.64",
     "@storybook/addon-interactions": "^6.5.0-alpha.64",
