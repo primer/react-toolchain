@@ -24,6 +24,7 @@
     "pkg-dir": "^6.0.1"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.3",
     "@changesets/cli": "^2.22.0"
   },
   "peerDependencies": {
