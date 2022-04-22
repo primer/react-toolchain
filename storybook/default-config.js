@@ -14,5 +14,9 @@ module.exports = {
   stories: ['../../../../**/*.stories.@(js|jsx|ts|tsx)'],
 
   // add common addons
-  addons: ['@storybook/addon-a11y', '@storybook/addon-links', '@storybook/addon-essentials']
+  addons: [
+    '@storybook/addon-a11y',
+    '@storybook/addon-links',
+    { name: '@storybook/addon-essentials', options: { backgrounds: false } }
+  ]
 };
