@@ -1,21 +1,28 @@
-// If there is a .primer-scripts/storybook-config.js file present at the root of the repo,
-// use that config, otherwise use the default config
-
-const fs = require('fs');
-const path = require('path');
-const defaultConfig = require('./default-config');
 const pkgDir = require('pkg-dir');
-
-let config;
+const path = require('path');
 
 const root = pkgDir.sync();
-const possibleLocation = path.resolve(root, '.primer-scripts/storybook-main.js');
 
-if (fs.existsSync(possibleLocation)) config = require(possibleLocation);
-else config = defaultConfig;
+module.exports = {
+  framework: '@storybook/react',
+  core: {
+    builder: {
+      // do we need to support webpack 4? (dotcom & memex use webpack 5)
+      name: 'webpack5',
+      options: { lazyCompilation: true, fsCache: true }
+    }
+  },
+  // temporarily disabled storyStoreV7, need to test before turning back on
+  // features: {storyStoreV7: true}, // required for lazyCompilation
 
-// convert relative glob path to absolute
-// we need to do this because this config file is deep inside node_modules
-config.stories = config.stories.map((glob) => path.resolve(root, glob));
+  // convert relative glob path to absolute
+  // we need to do this because this config file is deep inside node_modules
+  stories: ['./**/*.stories.@(js|jsx|ts|tsx)', './**/*.mdx'].map((glob) => path.resolve(root, glob)),
 
-module.exports = config;
+  // add common addons
+  addons: [
+    '@storybook/addon-a11y',
+    '@storybook/addon-links',
+    { name: '@storybook/addon-essentials', options: { backgrounds: false } }
+  ]
+};
