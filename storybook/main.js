@@ -23,6 +23,7 @@ module.exports = {
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-links',
+    'storybook-addon-performance/register',
     { name: '@storybook/addon-essentials', options: { backgrounds: false } }
   ]
 };
