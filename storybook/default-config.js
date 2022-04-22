@@ -13,6 +13,10 @@ module.exports = {
   // this path is relative to the root of the application
   stories: ['./**/*.stories.@(js|jsx|ts|tsx)'],
 
-  // todo: add common addons. devs can customise and add custom addons
-  addons: []
+  // add common addons
+  addons: [
+    '@storybook/addon-a11y',
+    '@storybook/addon-links',
+    { name: '@storybook/addon-essentials', options: { backgrounds: false } }
+  ]
 };
