@@ -8,7 +8,6 @@
 
 &nbsp;
 
-
 ### Requirements
 
 - webpack 5+
@@ -35,21 +34,39 @@ Add this script to your `package.json`:
 }
 ```
 
-To customize storybook config, create a file at `.primer-scripts/storybook-main.js`
+If you need to customize your storybook config, create `.storybook` directory in the root of your repository with the following files:
+
+1. `main.js`
+
+   ```js
+   const defaultConfig = require('@primer/react-scripts/storybook/main');
+   const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
+
+   module.exports = {
+     // extend default config
+     ...defaultConfig,
+
+     // remember to include default properties while extending
+     addons: [...defaultConfig.addons, 'storybook-addon-performance/register'],
+
+     // need to customise webpack config because we use custom resolvers for helpers/util
+     webpackFinal: (webpackConfig) => {
+       webpackConfig.resolve.plugins = [new TsconfigPathsPlugin({ baseUrl: './src/client' })];
+       return config;
+     }
+   };
+   ```
+
+2. `preview.js`
 
 ```js
-// example for memex:
-const defaultConfig = require('@primer/react-scripts/storybook/default-config');
-const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
+// step 1: export defaults
+export * from '@primer/react-scripts/storybook/preview';
 
-module.exports = {
-  // extend default config
-  ...defaultConfig,
+// step 2: customise and overwrite
+import { decorators } from '@primer/react-scripts/storybook/preview';
+import { withPerformance } from 'storybook-addon-performance';
 
-  // need to customise webpack config because we use custom resolvers for helpers/util
-  webpackFinal: (webpackConfig) => {
-    webpackConfig.resolve.plugins = [new TsconfigPathsPlugin({ baseUrl: './src/client' })];
-    return config;
-  }
-};
+decorators.push(withPerformance);
+export { decorators };
 ```
