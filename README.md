@@ -14,15 +14,15 @@
 
 &nbsp;
 
-### Setup
+## Setup
 
 ```
 npm install @primer/react-scripts --save-dev
 ```
 
-#### Storybook
+### Storybook
 
-Add this script to your `package.json`:
+Step 1. Add this script to your `package.json`:
 
 ```diff
 {
@@ -33,6 +33,32 @@ Add this script to your `package.json`:
   }
 }
 ```
+
+Step 2. Create a `ComponentName.stories.tsx` file
+
+We recommend putting this file next to the component.
+
+```jsx
+import {DatePicker} from './date-picker'
+
+export default {
+  title: 'Common components/Datepicker'
+}
+
+export const SimpleDatePicker = () => {
+  return <DatePicker variant="single" value={new Date()} />
+}
+```
+
+[Learn more about stories from the Storybook docs](https://storybook.js.org/docs/react/get-started/whats-a-story)
+
+&nbsp;
+
+You're good to go! Run `npm run storybook`.
+
+
+<details>
+  <summary><h4>Customise storybook</h4></summary>
 
 If you need to customize your storybook config, create `.storybook` directory in the root of your repository with the following files:
 
@@ -58,15 +84,15 @@ If you need to customize your storybook config, create `.storybook` directory in
    ```
 
 2. `preview.js`
+   ```js
+   // step 1: export defaults
+   export * from '@primer/react-scripts/storybook/preview';
 
-```js
-// step 1: export defaults
-export * from '@primer/react-scripts/storybook/preview';
+   // (optional) step 2: customise and overwrite
+   import { decorators } from '@primer/react-scripts/storybook/preview';
+   import { withPerformance } from 'storybook-addon-performance';
 
-// step 2: customise and overwrite
-import { decorators } from '@primer/react-scripts/storybook/preview';
-import { withPerformance } from 'storybook-addon-performance';
-
-decorators.push(withPerformance);
-export { decorators };
-```
+   decorators.push(withPerformance);
+   export { decorators };
+   ```
+</details>
