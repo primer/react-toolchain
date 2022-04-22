@@ -11,7 +11,7 @@ module.exports = {
   // look through entire repo for *.stories.ts files
   // might be slow, need to test
   // this path is relative to the root of the application
-  stories: ['./**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['./**/*.stories.@(js|jsx|ts|tsx)', './**/*.mdx'],
 
   // add common addons
   addons: [
