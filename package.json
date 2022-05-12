@@ -21,6 +21,7 @@
     "@storybook/manager-webpack5": "^6.5.0-alpha.64",
     "@storybook/react": "^6.5.0-alpha.64",
     "@storybook/testing-library": "^0.0.11",
+    "common-path": "^1.0.1",
     "execa": "^5.1.1",
     "pkg-dir": "^5.0.0",
     "storybook-addon-performance": "^0.16.1"
