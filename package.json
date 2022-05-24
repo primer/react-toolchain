@@ -31,7 +31,7 @@
     "@changesets/cli": "^2.22.0"
   },
   "peerDependencies": {
-    "@primer/react": ">=35.2.0",
+    "@primer/react": ">=35.2.2",
     "webpack": ">=5.0.0"
   }
 }
