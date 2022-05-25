@@ -13,7 +13,7 @@ jobs:
       - name: Approval was given
         run: echo "Release approved"
   release:
-    name: Release on approval
+    name: Release
     needs: approval
     uses: primer/.github/.github/workflows/release.yml@main
     secrets:
