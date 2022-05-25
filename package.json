@@ -7,7 +7,9 @@
     "prc": "index.js"
   },
   "description": "Toolchain to help build React components with Primer",
-  "scripts": {},
+  "scripts": {
+    "release": "changeset publish"
+  },
   "keywords": [],
   "author": "primer",
   "license": "MIT",
