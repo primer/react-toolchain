@@ -1,4 +1,4 @@
-name: Release
+name: Release stable
 
 on:
   push:
@@ -8,7 +8,10 @@ on:
 jobs:
   approval:
     runs-on: ubuntu-latest
-    environment: 'needs-approval'  
+    environment: 'needs-approval'
+    steps:
+      - name: Approval was given
+        run: echo "Release approved"
   release:
     name: Release on approval
     needs: approval
