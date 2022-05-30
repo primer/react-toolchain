@@ -4,6 +4,7 @@
   <b>Toolchain to help build React components with Primer</b>
   <br><br>
   <img src="https://img.shields.io/badge/maturity-proof--of--concept-d85151?style=flat-square"/>
+  <img src="https://img.shields.io/github/package-json/v/primer/react-scripts?style=flat-square"/>
 </p>
 
 &nbsp;
