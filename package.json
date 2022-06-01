@@ -26,7 +26,8 @@
     "common-path": "^1.0.1",
     "execa": "^5.1.1",
     "pkg-dir": "^5.0.0",
-    "storybook-addon-performance": "^0.16.1"
+    "storybook-addon-performance": "^0.16.1",
+    "storybook-addon-turbo-build": "^1.1.0"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.3",

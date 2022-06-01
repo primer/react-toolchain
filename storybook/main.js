@@ -39,6 +39,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     'storybook-addon-performance/register',
-    { name: '@storybook/addon-essentials', options: { backgrounds: false } }
+    { name: '@storybook/addon-essentials', options: { backgrounds: false } },
+    { name: 'storybook-addon-turbo-build', options: { optimizationLevel: 2 } }
   ]
 };
