@@ -3,7 +3,7 @@ name: Release canary
 on:
   push:
     branches-ignore:
-    # - main (remove comment when ready for stable release)
+      - main (remove comment when ready for stable release)
       - 'changeset-release/main'
 
 jobs:
