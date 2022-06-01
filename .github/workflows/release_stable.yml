@@ -6,15 +6,8 @@ on:
       - main
 
 jobs:
-  approval:
-    runs-on: ubuntu-latest
-    environment: 'needs-approval'
-    steps:
-      - name: Approval was given
-        run: echo "Release approved"
   release:
     name: Release
-    needs: approval
     uses: primer/.github/.github/workflows/release.yml@main
     secrets:
       gh_token: ${{ secrets.GPR_AUTH_TOKEN_SHARED }}
