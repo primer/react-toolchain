@@ -20,13 +20,7 @@ const getStoryPaths = () => {
 
 module.exports = {
   framework: '@storybook/react',
-  core: {
-    builder: {
-      // do we need to support webpack 4? (dotcom & memex use webpack 5)
-      name: 'webpack5',
-      options: { lazyCompilation: true, fsCache: true }
-    }
-  },
+
   // temporarily disabled storyStoreV7, need to test before turning back on
   // features: {storyStoreV7: true}, // required for lazyCompilation
 
