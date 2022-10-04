@@ -30,7 +30,7 @@ Step 1. Add this script to your `package.json`:
   scripts: {
     "start": "webpack",
     "test": "jest",
-+   "storybook": "prc storybook"
++   "storybook": "toolchain storybook"
   }
 }
 ```
