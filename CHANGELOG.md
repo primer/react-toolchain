@@ -1,5 +1,11 @@
 # @primer/react-scripts
 
+## 0.1.1
+
+### Patch Changes
+
+- [#17](https://github.com/primer/react-toolchain/pull/17) [`f35fe7a`](https://github.com/primer/react-toolchain/commit/f35fe7aad6329095f1a104df284e83a0496ac30f) Thanks [@siddharthkp](https://github.com/siddharthkp)! - Upgrade storybook version to ^6.5.12
+
 ## 0.1.0
 
 ### Minor Changes
