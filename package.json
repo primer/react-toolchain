@@ -1,10 +1,10 @@
 {
-  "name": "@primer/react-scripts",
+  "name": "@primer/react-toolchain",
   "version": "0.0.2",
   "main": "index.js",
   "bin": {
-    "primer-react-scripts": "index.js",
-    "prc": "index.js"
+    "toolchain": "index.js",
+    "primer-react-toolchain": "index.js"
   },
   "description": "Toolchain to help build React components with Primer",
   "scripts": {
