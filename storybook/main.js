@@ -15,7 +15,10 @@ const getStoryPaths = () => {
   });
 
   const { commonDir } = commonPath(stories);
-  return [commonDir + '/' + pattern, commonDir + '/**/*.mdx'];
+  return [
+    (commonDir || '.') + '/' + pattern, 
+    (commonDir || '.') + '/**/*.mdx'
+  ];
 };
 
 module.exports = {
