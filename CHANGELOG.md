@@ -1,5 +1,11 @@
 # @primer/react-scripts
 
+## 0.1.0
+
+### Minor Changes
+
+- [#15](https://github.com/primer/react-toolchain/pull/15) [`4068623`](https://github.com/primer/react-toolchain/commit/406862300f28d3fd4d4762074303918dacb77da3) Thanks [@siddharthkp](https://github.com/siddharthkp)! - Rename package to `@primer/react-toolchain`
+
 ## 0.0.2
 
 ### Patch Changes
