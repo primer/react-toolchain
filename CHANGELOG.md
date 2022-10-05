@@ -1,5 +1,11 @@
 # @primer/react-scripts
 
+## 0.2.0
+
+### Minor Changes
+
+- [#19](https://github.com/primer/react-toolchain/pull/19) [`c5bb6f6`](https://github.com/primer/react-toolchain/commit/c5bb6f61e9ff514ab86850285537c8093f94e561) Thanks [@siddharthkp](https://github.com/siddharthkp)! - Add ability to build storybook
+
 ## 0.1.1
 
 ### Patch Changes
