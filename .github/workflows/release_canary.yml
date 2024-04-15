@@ -9,7 +9,7 @@ on:
 jobs:
   release-canary:
     name: Canary
-    uses: primer/.github/.github/workflows/release_canary.yml@main
+    uses: primer/.github/.github/workflows/release_canary.yml@v1.0.0
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_AUTH_TOKEN_SHARED }}
